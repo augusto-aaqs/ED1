@@ -1,1 +1,52 @@
+#include <stdio.h>
 
+// Declaração de funções
+double add(double a, double b);
+double subtract(double a, double b);
+double multiply(double a, double b);
+double divide(double a, double b);
+
+int main() {
+    double num1, num2;
+    printf("Digite dois números: ");
+    scanf("%lf %lf", &num1, &num2);
+
+    printf("Adição: %.2lf\n", add(num1, num2));
+    printf("Subtração: %.2lf\n", subtract(num1, num2));
+    printf("Multiplicação: %.2lf\n", multiply(num1, num2));
+    printf("Divisão: %.2lf\n", divide(num1, num2));
+
+    return 0;
+}
+
+// Implementação da função de Adição
+//a funcao ADD realiza a soma de dois numeros
+//EX:(a + b)
+double add(double a, double b) {
+    return a + b;
+}
+
+// Implementação da função de subtração
+//a funcao de subtração realiza a subtração de dois numeros
+//EX:(a - b)
+double subtract(double a, double b) {
+    return a - b;
+}
+
+// Implementação da função de multiplicação
+//realiza a multiplicacao de dois numeros
+//EX:(a * b)
+double multiply(double a, double b) {
+    return a * b;
+}
+
+// Implementação da função de divisão
+//realiza a divisao de dois numeros e evita divisao por zero
+//EX:(a / b)
+double divide(double a, double b) {
+    if (b != 0) {
+        return a / b;
+    } else {
+        return 0.0; // Retorna zero se b é zero para evitar divisão por zero
+    }
+}
